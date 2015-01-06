@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CADA04861A5C6ED800D6A875 /* libEntitySystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CADA047A1A5C6ED700D6A875 /* libEntitySystem.a */; };
+		CADA04981A5C6F1700D6A875 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = CADA04951A5C6F1700D6A875 /* Entity.m */; };
+		CADA04991A5C6F1700D6A875 /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CADA04971A5C6F1700D6A875 /* EntityManager.m */; };
+		CADA049C1A5C6F3200D6A875 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = CADA049B1A5C6F3200D6A875 /* Component.m */; };
+		CADA049F1A5C6F4300D6A875 /* System.m in Sources */ = {isa = PBXBuildFile; fileRef = CADA049E1A5C6F4300D6A875 /* System.m */; };
+		CADA04A21A5C705100D6A875 /* TagsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = CADA04A11A5C705100D6A875 /* TagsComponent.m */; };
+		CADA04B41A5C77EB00D6A875 /* Component.h in Headers */ = {isa = PBXBuildFile; fileRef = CADA049A1A5C6F3200D6A875 /* Component.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CADA04B51A5C77EE00D6A875 /* Entity.h in Headers */ = {isa = PBXBuildFile; fileRef = CADA04941A5C6F1700D6A875 /* Entity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CADA04B61A5C77F000D6A875 /* EntityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CADA04961A5C6F1700D6A875 /* EntityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CADA04B71A5C77F400D6A875 /* System.h in Headers */ = {isa = PBXBuildFile; fileRef = CADA049D1A5C6F4300D6A875 /* System.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CADA04B81A5C77F900D6A875 /* TagsComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = CADA04A01A5C705100D6A875 /* TagsComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CADA04871A5C6ED800D6A875 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CADA04721A5C6ED700D6A875 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CADA04791A5C6ED700D6A875;
+			remoteInfo = EntitySystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CADA04781A5C6ED700D6A875 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CADA047A1A5C6ED700D6A875 /* libEntitySystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEntitySystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADA04851A5C6ED800D6A875 /* EntitySystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntitySystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CADA048B1A5C6ED800D6A875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CADA04941A5C6F1700D6A875 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		CADA04951A5C6F1700D6A875 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		CADA04961A5C6F1700D6A875 /* EntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		CADA04971A5C6F1700D6A875 /* EntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityManager.m; sourceTree = "<group>"; };
+		CADA049A1A5C6F3200D6A875 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		CADA049B1A5C6F3200D6A875 /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		CADA049D1A5C6F4300D6A875 /* System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = System.h; sourceTree = "<group>"; };
+		CADA049E1A5C6F4300D6A875 /* System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = System.m; sourceTree = "<group>"; };
+		CADA04A01A5C705100D6A875 /* TagsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsComponent.h; sourceTree = "<group>"; };
+		CADA04A11A5C705100D6A875 /* TagsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsComponent.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CADA04771A5C6ED700D6A875 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADA04821A5C6ED800D6A875 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADA04861A5C6ED800D6A875 /* libEntitySystem.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CADA04711A5C6ED700D6A875 = {
+			isa = PBXGroup;
+			children = (
+				CADA047C1A5C6ED700D6A875 /* EntitySystem */,
+				CADA04891A5C6ED800D6A875 /* EntitySystemTests */,
+				CADA047B1A5C6ED700D6A875 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CADA047B1A5C6ED700D6A875 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CADA047A1A5C6ED700D6A875 /* libEntitySystem.a */,
+				CADA04851A5C6ED800D6A875 /* EntitySystemTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CADA047C1A5C6ED700D6A875 /* EntitySystem */ = {
+			isa = PBXGroup;
+			children = (
+				CADA049A1A5C6F3200D6A875 /* Component.h */,
+				CADA049B1A5C6F3200D6A875 /* Component.m */,
+				CADA04941A5C6F1700D6A875 /* Entity.h */,
+				CADA04951A5C6F1700D6A875 /* Entity.m */,
+				CADA04961A5C6F1700D6A875 /* EntityManager.h */,
+				CADA04971A5C6F1700D6A875 /* EntityManager.m */,
+				CADA049D1A5C6F4300D6A875 /* System.h */,
+				CADA049E1A5C6F4300D6A875 /* System.m */,
+				CADA04A01A5C705100D6A875 /* TagsComponent.h */,
+				CADA04A11A5C705100D6A875 /* TagsComponent.m */,
+			);
+			path = EntitySystem;
+			sourceTree = "<group>";
+		};
+		CADA04891A5C6ED800D6A875 /* EntitySystemTests */ = {
+			isa = PBXGroup;
+			children = (
+				CADA048A1A5C6ED800D6A875 /* Supporting Files */,
+			);
+			path = EntitySystemTests;
+			sourceTree = "<group>";
+		};
+		CADA048A1A5C6ED800D6A875 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CADA048B1A5C6ED800D6A875 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CADA04B31A5C77E400D6A875 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADA04B41A5C77EB00D6A875 /* Component.h in Headers */,
+				CADA04B51A5C77EE00D6A875 /* Entity.h in Headers */,
+				CADA04B61A5C77F000D6A875 /* EntityManager.h in Headers */,
+				CADA04B71A5C77F400D6A875 /* System.h in Headers */,
+				CADA04B81A5C77F900D6A875 /* TagsComponent.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CADA04791A5C6ED700D6A875 /* EntitySystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CADA048E1A5C6ED800D6A875 /* Build configuration list for PBXNativeTarget "EntitySystem" */;
+			buildPhases = (
+				CADA04761A5C6ED700D6A875 /* Sources */,
+				CADA04771A5C6ED700D6A875 /* Frameworks */,
+				CADA04781A5C6ED700D6A875 /* CopyFiles */,
+				CADA04B31A5C77E400D6A875 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EntitySystem;
+			productName = EntitySystem;
+			productReference = CADA047A1A5C6ED700D6A875 /* libEntitySystem.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CADA04841A5C6ED800D6A875 /* EntitySystemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CADA04911A5C6ED800D6A875 /* Build configuration list for PBXNativeTarget "EntitySystemTests" */;
+			buildPhases = (
+				CADA04811A5C6ED800D6A875 /* Sources */,
+				CADA04821A5C6ED800D6A875 /* Frameworks */,
+				CADA04831A5C6ED800D6A875 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CADA04881A5C6ED800D6A875 /* PBXTargetDependency */,
+			);
+			name = EntitySystemTests;
+			productName = EntitySystemTests;
+			productReference = CADA04851A5C6ED800D6A875 /* EntitySystemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CADA04721A5C6ED700D6A875 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = zoeetrope;
+				TargetAttributes = {
+					CADA04791A5C6ED700D6A875 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					CADA04841A5C6ED800D6A875 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = CADA04751A5C6ED700D6A875 /* Build configuration list for PBXProject "EntitySystem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CADA04711A5C6ED700D6A875;
+			productRefGroup = CADA047B1A5C6ED700D6A875 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CADA04791A5C6ED700D6A875 /* EntitySystem */,
+				CADA04841A5C6ED800D6A875 /* EntitySystemTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CADA04831A5C6ED800D6A875 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CADA04761A5C6ED700D6A875 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CADA049F1A5C6F4300D6A875 /* System.m in Sources */,
+				CADA04A21A5C705100D6A875 /* TagsComponent.m in Sources */,
+				CADA049C1A5C6F3200D6A875 /* Component.m in Sources */,
+				CADA04991A5C6F1700D6A875 /* EntityManager.m in Sources */,
+				CADA04981A5C6F1700D6A875 /* Entity.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CADA04811A5C6ED800D6A875 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CADA04881A5C6ED800D6A875 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CADA04791A5C6ED700D6A875 /* EntitySystem */;
+			targetProxy = CADA04871A5C6ED800D6A875 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CADA048C1A5C6ED800D6A875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CADA048D1A5C6ED800D6A875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CADA048F1A5C6ED800D6A875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CADA04901A5C6ED800D6A875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CADA04921A5C6ED800D6A875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EntitySystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CADA04931A5C6ED800D6A875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EntitySystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CADA04751A5C6ED700D6A875 /* Build configuration list for PBXProject "EntitySystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CADA048C1A5C6ED800D6A875 /* Debug */,
+				CADA048D1A5C6ED800D6A875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CADA048E1A5C6ED800D6A875 /* Build configuration list for PBXNativeTarget "EntitySystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CADA048F1A5C6ED800D6A875 /* Debug */,
+				CADA04901A5C6ED800D6A875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CADA04911A5C6ED800D6A875 /* Build configuration list for PBXNativeTarget "EntitySystemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CADA04921A5C6ED800D6A875 /* Debug */,
+				CADA04931A5C6ED800D6A875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CADA04721A5C6ED700D6A875 /* Project object */;
+}

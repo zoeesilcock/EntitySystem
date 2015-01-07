@@ -14,7 +14,6 @@
 
 - (uint32_t)generateNewEid;
 - (Entity *)createEntity;
-- (Entity *)addEntity:(Entity*)entity;
 - (void)addComponent:(Component *)component toEntity:(Entity *)entity;
 - (Component *)getComponentOfClass:(Class)class forEntity:(Entity *)entity;
 - (void)removeEntity:(Entity *)entity;

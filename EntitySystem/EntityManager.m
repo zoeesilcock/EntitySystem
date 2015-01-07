@@ -14,7 +14,7 @@
 }
 
 - (id)init {
-    if ((self = [super init])) {        
+    if ((self = [super init])) {
         _entities = [NSMutableArray array];
         _componentsByClass = [NSMutableDictionary dictionary];
         _lowestUnassignedEid = 1;
@@ -42,20 +42,12 @@
     return [[Entity alloc] initWithEid:eid entityManager:self];
 }
 
-- (Entity *)addEntity:(Entity*)entity {
-    uint32_t eid = [self generateNewEid];
-    [_entities addObject:@(eid)];
-    entity.eid = eid;
-    entity.entityManager = self;
-    return entity;
-}
-
 - (void)addComponent:(Component *)component toEntity:(Entity *)entity {
     NSMutableDictionary *components = _componentsByClass[NSStringFromClass([component class])];
     if (!components) {
         components = [NSMutableDictionary dictionary];
         _componentsByClass[NSStringFromClass([component class])] = components;
-    }    
+    }
     components[@(entity.eid)] = component;
 }
 

@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		CA2A689B1A5F08B4002B90E9 /* UniversalLib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CA2A689C1A5F08B4002B90E9 /* Build configuration list for PBXAggregateTarget "UniversalLib" */;
+			buildPhases = (
+				CA2A689F1A5F08C2002B90E9 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalLib;
+			productName = UniversalLib;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		CADA04861A5C6ED800D6A875 /* libEntitySystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CADA047A1A5C6ED700D6A875 /* libEntitySystem.a */; };
 		CADA04981A5C6F1700D6A875 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = CADA04951A5C6F1700D6A875 /* Entity.m */; };
@@ -191,6 +205,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = zoeetrope;
 				TargetAttributes = {
+					CA2A689B1A5F08B4002B90E9 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					CADA04791A5C6ED700D6A875 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -213,6 +230,7 @@
 			targets = (
 				CADA04791A5C6ED700D6A875 /* EntitySystem */,
 				CADA04841A5C6ED800D6A875 /* EntitySystemTests */,
+				CA2A689B1A5F08B4002B90E9 /* UniversalLib */,
 			);
 		};
 /* End PBXProject section */
@@ -226,6 +244,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA2A689F1A5F08C2002B90E9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target ImageFilters ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target ImageFilters -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 2. Create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CADA04761A5C6ED700D6A875 /* Sources */ = {
@@ -258,6 +292,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CA2A689D1A5F08B4002B90E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CA2A689E1A5F08B4002B90E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CADA048C1A5C6ED800D6A875 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -387,6 +435,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA2A689C1A5F08B4002B90E9 /* Build configuration list for PBXAggregateTarget "UniversalLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA2A689D1A5F08B4002B90E9 /* Debug */,
+				CA2A689E1A5F08B4002B90E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CADA04751A5C6ED700D6A875 /* Build configuration list for PBXProject "EntitySystem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

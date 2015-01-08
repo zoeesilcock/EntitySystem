@@ -27,7 +27,7 @@ Installation
 
 You can add this repository as a subproject to your xcode project by cloning
 it into a subdirectory or setting up a git submodule and then dragging the
-.xcodeproject file into xcode.
+.xcodeproj file into xcode.
 
 When you have the subproject in place you need to add the library to your
 "Target Dependencies" under "Build Phases" in your project. Finally add the

@@ -22,6 +22,17 @@ helped me to avoid some of the pitfalls of inheritance based design which would
 have been my first instinct. But don't take my word for it, read the article
 above, Ray explains it all so well.
 
+Installation
+============
+
+You can add this repository as a subproject to your xcode project by cloning
+it into a subdirectory or setting up a git submodule and then dragging the
+.xcodeproject file into xcode.
+
+When you have the subproject in place you need to add the library to your
+"Target Dependencies" under "Build Phases" in your project. Finally add the
+binary which is called libEntitySystem.a to "Link Binary With Libraries".
+
 Usage
 =====
 

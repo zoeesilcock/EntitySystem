@@ -42,7 +42,7 @@ example shows how it could be done in cocos2d.
 
 RenderComponent.h
 ```objective-c
-#import "Component.h"
+#import <EntitySystem/Component.h>
 #import "cocos2d.h"
 
 @interface RenderComponent : Component
@@ -72,6 +72,9 @@ an entity factory for creating your entities but we'll keep it simple and
 create the entity and add it's component on initialization.
 ```objective-c
 #import "GameScene.h"
+#import <EntitySystem/EntityManager.h>
+#import "Entity+MyEntity.h"
+#import "RenderComponent.h"
 
 @implementation GameScene {
     EntityManager *_entityManager;
@@ -90,7 +93,7 @@ This would be the simplest example of an entity. You can now access the render
 component on the entity and find the entity via the entity manager.
 
 ```objective-c
-RenderComponent *render = (RenderComponent *)[_entityManager getComponentOfClass:[RenderComponent class] forEntity:self];
+RenderComponent *render = (RenderComponent *)[_entityManager getComponentOfClass:[RenderComponent class] forEntity:entity];
 NSArray *entities = [_entityManager getAllEntitiesPosessingComponentOfClass:[RenderComponent class]];
 ```
 
@@ -99,7 +102,8 @@ for the Entity class where I add methods for accessing my components thusly.
 
 Entity+MyEntity.h
 ```objective-c
-#import "Entity.h"
+#import <EntitySystem/Entity.h>
+#import "RenderComponent.h"
 
 @interface Entity (MyEntity)
 - (RenderComponent *)render;
@@ -109,7 +113,7 @@ Entity+MyEntity.h
 MyEntity.m
 ```objective-c
 #import "Entity+MyEntity.h"
-#import "EntityManager.h"
+#import <EntitySystem/EntityManager.h>
 
 @implementation Entity (MyEntity)
 - (RenderComponent *)render {
@@ -131,7 +135,7 @@ iteration of the game loop.
 
 MoveSystem.h
 ```objective-c
-#import "System.h"
+#import <EntitySystem/System.h>
 
 @interface MoveSystem : System
 - (void)update:(float)delta;
@@ -140,6 +144,7 @@ MoveSystem.h
 
 MoveSystem.m
 ```objective-c
+#import <EntitySystem/EntityManager.h>
 #import "Entity+MyEntity.h"
 #import "MoveSystem.h"
 
@@ -148,7 +153,8 @@ MoveSystem.m
     NSArray *entities = [self.entityManager getAllEntitiesPosessingComponentOfClass:[RenderComponent class]];
 
     for (Entity *entity in entities) {
-        entity.render.position.x += delta * 0.1f;
+        CCNode *node = entity.render.node;
+        node.position = ccp(node.position.x + delta * 100, node.position.y);
     }
 }
 @end
@@ -161,10 +167,12 @@ game scene from above it would look like this.
 
 GameScene.m
 ```objective-c
-#import "GameScene.h"
+// ...
+#import "MoveSystem"
 
 @implementation GameScene {
-     EntityManager *_entityManager;
+    // ...
+    MoveSystem *_moveSystem;
 }
   - (void)didLoadFromCCB {
         // ...
@@ -173,7 +181,7 @@ GameScene.m
 
     - (void)update:(CCTime)delta {
         // ...
-        [moveSystem update:delta];
+        [_moveSystem update:delta];
     }
 @end
 ```

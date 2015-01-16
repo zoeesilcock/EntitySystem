@@ -64,6 +64,13 @@
     [_entities removeObject:@(entity.eid)];
 }
 
+- (void)removeAllEntities {
+    for (NSNumber *eid in [_entities copy]) {
+        Entity *entity = [self getEntityById:eid.integerValue];
+        [self removeEntity:entity];
+    }
+}
+
 - (NSArray *)getAllEntitiesPosessingComponentOfClass:(Class)class {
     NSMutableDictionary *components = _componentsByClass[NSStringFromClass(class)];
     if (components) {
